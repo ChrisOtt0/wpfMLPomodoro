@@ -42,7 +42,6 @@ namespace wpfMLPomodoro
         {
             InitializeComponent();
             DataContext = ob;
-            MessageBox.Show(DirOperations.GetTextDirectory());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -73,6 +72,9 @@ namespace wpfMLPomodoro
             ob.ObservableAB = new ObservableCollection<string>(fl.GetBoth().Select(StringOperations.getFileName));
             ob.ObservableDictionaryList = new ObservableCollection<string>(bof.GetEntriesInDictionary());
             ob.ObservableTokens = new ObservableCollection<int>(k.GetTokenCount().Tokens);
+            
+            BtnTest.IsEnabled = true;
+            BtnCategorize.IsEnabled = true;
 
             //Trace.WriteLine(bof.GetAllWordsInDictionary().ToList()[0]);
 
