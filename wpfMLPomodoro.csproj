@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="6_Resources\ClassA\" />
+    <Folder Include="6_Resources\ClassB\" />
+    <Folder Include="6_Resources\Stopwords\" />
+    <Folder Include="6_Resources\Tests\ClassA\" />
+    <Folder Include="6_Resources\Tests\ClassB\" />
+  </ItemGroup>
+
+</Project>
