@@ -36,9 +36,9 @@
             <TabItem Header="Training">
                 <Grid Background="#ced4da">
                     <Button Content="Train" HorizontalAlignment="Left" Margin="40,30,0,0" VerticalAlignment="Top" Click="Button_Click" Width="80"/>
-                    <Button Content="Test" HorizontalAlignment="Left" Margin="40, 60, 0, 0" VerticalAlignment="Top" Click="Button_Click_1" Width="80"/>
+                    <Button x:Name="BtnTest" IsEnabled="False" Content="Test" HorizontalAlignment="Left" Margin="40, 60, 0, 0" VerticalAlignment="Top" Click="Button_Click_1" Width="80"/>
                     <TextBox x:Name="trainTimeTextBox" Text="Time: " TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" Margin="140,30,0,0" Height="18" IsReadOnly="True"/>
-                    <Button x:Name="BtnCategorize" Content="Categorize" HorizontalAlignment="Left" Margin="40, 90, 0, 0" Click="BtnCategorize_Click" VerticalAlignment="Top" Width="80"/>
+                    <Button x:Name="BtnCategorize" IsEnabled="False" Content="Categorize" HorizontalAlignment="Left" Margin="40, 90, 0, 0" Click="BtnCategorize_Click" VerticalAlignment="Top" Width="80"/>
                     <TextBox AcceptsReturn="True" x:Name="inputTextBox" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="140, 60, 0, 0" Width="600" Height="320"/>
                 </Grid>
             </TabItem>
