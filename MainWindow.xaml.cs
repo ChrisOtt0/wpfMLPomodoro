@@ -1,4 +1,5 @@
-﻿using System;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using wpfMLPomodoro._4_FileIO;
 using wpfMLPomodoro.Business;
 using wpfMLPomodoro.Controller;
 using wpfMLPomodoro.Domain;
@@ -75,6 +77,7 @@ namespace wpfMLPomodoro
             
             BtnTest.IsEnabled = true;
             BtnCategorize.IsEnabled = true;
+            BtnPDF.IsEnabled = true;
 
             //Trace.WriteLine(bof.GetAllWordsInDictionary().ToList()[0]);
 
@@ -207,6 +210,24 @@ namespace wpfMLPomodoro
             }
 
             MessageBox.Show("Input text belongs to: " + c.Categorize(currentVector));
+        }
+
+        // Upload PDF text button
+        private void BtnPDF_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.DefaultExt = ".pdf"; // Required file extension 
+            fileDialog.Filter = "PDF documents (.pdf)|*.pdf"; // Optional file extensions
+
+            bool result = (bool)fileDialog.ShowDialog();
+
+            if (result)
+            {
+                // Insert FileAdapter PDFFile to read
+                FileAdapter pdfAdapter = new PDFFile("pdf");
+                string text = pdfAdapter.GetAllTextFromFileA(fileDialog.FileName);
+                inputTextBox.Text = text;
+            }
         }
     }
 }
