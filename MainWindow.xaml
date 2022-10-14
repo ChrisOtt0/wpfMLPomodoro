@@ -1,4 +1,4 @@
-﻿<Window x:Class="wpfMLPomodoro.MainWindow"
+<Window x:Class="wpfMLPomodoro.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -40,6 +40,7 @@
                     <TextBox x:Name="trainTimeTextBox" Text="Time: " TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" Margin="140,30,0,0" Height="18" IsReadOnly="True"/>
                     <Button x:Name="BtnCategorize" IsEnabled="False" Content="Categorize" HorizontalAlignment="Left" Margin="40, 90, 0, 0" Click="BtnCategorize_Click" VerticalAlignment="Top" Width="80"/>
                     <TextBox AcceptsReturn="True" x:Name="inputTextBox" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="140, 60, 0, 0" Width="600" Height="320"/>
+                    <Button x:Name="BtnPDF" IsEnabled="False" Content="Upload PDF" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40, 120, 0, 0" Width="80" Click="BtnPDF_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="File names">
